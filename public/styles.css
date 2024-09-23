@@ -1,0 +1,124 @@
+/* Professional Font */
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Section Styling */
+.section {
+    margin: 50px 0;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+
+h1, h2 {
+    font-size: 2.5rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    opacity: 0; /* Start hidden */
+    transform: translateX(-100px); /* Start off-screen */
+}
+
+ul li.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Wavy Line Styling */
+.wavy-line {
+    display: block;
+    margin: 50px auto;
+    height: 300px;
+    width: 100px;
+}
+
+.wave-highlight {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    transition: stroke-dashoffset 1.5s ease;
+}
+
+.wavy-line.lit .wave-highlight {
+    stroke-dashoffset: 0;
+}
+
+/* Light Circles Styling */
+.light-circles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.2;
+    margin: 20px 0;
+    transition: opacity 0.5s ease;
+}
+
+.circle.lit {
+    opacity: 1;
+}
+
+/* Diamond Transition */
+.diamonds {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.diamond {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    transform: rotate(45deg);
+    opacity: 0.2;
+    margin: 0 20px;
+    transition: opacity 0.5s ease;
+}
+
+.diamond.lit {
+    opacity: 1;
+}
+
+/* Contact Section Styling */
+.contact-info p {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+/* Typewriter effect */
+.typewriter-text {
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(20) 1s forwards;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
